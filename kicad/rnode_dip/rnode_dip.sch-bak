@@ -1,4 +1,359 @@
-EESchema Schematic File Version 2
-EELAYER 25 0
+EESchema Schematic File Version 4
+EELAYER 30 0
 EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 1 1
+Title ""
+Date ""
+Rev ""
+Comp ""
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Comp
+L MCU_Microchip_ATmega:ATmega1284P-PU U?
+U 1 1 602F0FC9
+P 5150 3450
+F 0 "U?" H 5150 5700 50  0000 C CNN
+F 1 "ATmega1284P-PU" H 5200 5600 50  0000 C CNN
+F 2 "Package_DIP:DIP-40_W15.24mm" H 5150 3450 50  0001 C CIN
+F 3 "http://ww1.microchip.com/downloads/en/DeviceDoc/Atmel-8272-8-bit-AVR-microcontroller-ATmega164A_PA-324A_PA-644A_PA-1284_P_datasheet.pdf" H 5150 3450 50  0001 C CNN
+	1    5150 3450
+	1    0    0    -1  
+$EndComp
+$Comp
+L Regulator_Linear:MCP1700-3302E_TO92 U?
+U 1 1 602F358D
+P 2300 6850
+F 0 "U?" H 2300 6608 50  0000 C CNN
+F 1 "MCP1700-3302E_TO92" H 2300 6699 50  0000 C CNN
+F 2 "Package_TO_SOT_THT:TO-92_Inline" H 2300 6650 50  0001 C CIN
+F 3 "http://ww1.microchip.com/downloads/en/DeviceDoc/20001826D.pdf" H 2300 6850 50  0001 C CNN
+	1    2300 6850
+	1    0    0    1   
+$EndComp
+$Comp
+L Device:C C?
+U 1 1 602F581A
+P 1600 7000
+F 0 "C?" H 1715 7046 50  0000 L CNN
+F 1 "C" H 1715 6955 50  0000 L CNN
+F 2 "" H 1638 6850 50  0001 C CNN
+F 3 "~" H 1600 7000 50  0001 C CNN
+	1    1600 7000
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C C?
+U 1 1 602F5EC1
+P 2850 7000
+F 0 "C?" H 2965 7046 50  0000 L CNN
+F 1 "C" H 2965 6955 50  0000 L CNN
+F 2 "" H 2888 6850 50  0001 C CNN
+F 3 "~" H 2850 7000 50  0001 C CNN
+	1    2850 7000
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C C?
+U 1 1 602F6454
+P 3250 7000
+F 0 "C?" H 3365 7046 50  0000 L CNN
+F 1 "C" H 3365 6955 50  0000 L CNN
+F 2 "" H 3288 6850 50  0001 C CNN
+F 3 "~" H 3250 7000 50  0001 C CNN
+	1    3250 7000
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1600 6850 2000 6850
+Wire Wire Line
+	2600 6850 2850 6850
+Wire Wire Line
+	2850 6850 3250 6850
+Connection ~ 2850 6850
+Wire Wire Line
+	1600 7150 2300 7150
+Wire Wire Line
+	2300 7150 2850 7150
+Connection ~ 2300 7150
+Wire Wire Line
+	2850 7150 3250 7150
+Connection ~ 2850 7150
+Wire Wire Line
+	2300 7150 2300 7300
+$Comp
+L power:GND #PWR?
+U 1 1 602FEAE4
+P 2300 7300
+F 0 "#PWR?" H 2300 7050 50  0001 C CNN
+F 1 "GND" H 2305 7127 50  0000 C CNN
+F 2 "" H 2300 7300 50  0001 C CNN
+F 3 "" H 2300 7300 50  0001 C CNN
+	1    2300 7300
+	1    0    0    -1  
+$EndComp
+Text GLabel 1100 6850 0    50   Input ~ 0
+VBUS
+Wire Wire Line
+	1600 6850 1100 6850
+Connection ~ 1600 6850
+$Comp
+L power:VCC #PWR?
+U 1 1 602FFF7F
+P 3800 6850
+F 0 "#PWR?" H 3800 6700 50  0001 C CNN
+F 1 "VCC" H 3817 7023 50  0000 C CNN
+F 2 "" H 3800 6850 50  0001 C CNN
+F 3 "" H 3800 6850 50  0001 C CNN
+	1    3800 6850
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3800 6850 3250 6850
+Connection ~ 3250 6850
+Text Notes 2000 6050 0    118  ~ 0
+LDO
+Wire Notes Line
+	500  5750 4100 5750
+Wire Notes Line
+	4100 5750 4100 7800
+$Comp
+L Connector:Conn_01x06_Male J?
+U 1 1 60312131
+P 2650 2750
+F 0 "J?" H 2622 2632 50  0000 R CNN
+F 1 "Conn_01x06_Male" V 2450 3000 50  0000 R CNN
+F 2 "" H 2650 2750 50  0001 C CNN
+F 3 "~" H 2650 2750 50  0001 C CNN
+	1    2650 2750
+	-1   0    0    1   
+$EndComp
+$Comp
+L power:GND #PWR?
+U 1 1 6031373F
+P 2450 2950
+F 0 "#PWR?" H 2450 2700 50  0001 C CNN
+F 1 "GND" H 2455 2777 50  0000 C CNN
+F 2 "" H 2450 2950 50  0001 C CNN
+F 3 "" H 2450 2950 50  0001 C CNN
+	1    2450 2950
+	1    0    0    -1  
+$EndComp
+Text GLabel 2450 2750 0    50   Input ~ 0
+VBUS
+Text GLabel 2450 2650 0    50   Input ~ 0
+UART_RX0
+Text GLabel 2450 2550 0    50   Input ~ 0
+UART_TX0
+Text GLabel 5750 4450 2    50   Input ~ 0
+UART_RX0
+Text GLabel 5750 4550 2    50   Input ~ 0
+UART_TX0
+Text GLabel 5750 4650 2    50   Input ~ 0
+UART_RX1
+Text GLabel 5750 4750 2    50   Input ~ 0
+UART_TX1
+$Comp
+L Device:Crystal Y?
+U 1 1 60324933
+P 3850 2100
+F 0 "Y?" V 3804 2231 50  0000 L CNN
+F 1 "Crystal" V 3895 2231 50  0000 L CNN
+F 2 "" H 3850 2100 50  0001 C CNN
+F 3 "~" H 3850 2100 50  0001 C CNN
+	1    3850 2100
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	4550 1950 3850 1950
+Wire Wire Line
+	4550 2150 4300 2150
+Wire Wire Line
+	4300 2150 4300 2250
+Wire Wire Line
+	4300 2250 3850 2250
+Wire Wire Line
+	3850 1950 3550 1950
+Connection ~ 3850 1950
+Wire Wire Line
+	3850 2250 3550 2250
+Connection ~ 3850 2250
+$Comp
+L Device:C C?
+U 1 1 603294C2
+P 3400 1950
+F 0 "C?" V 3148 1950 50  0000 C CNN
+F 1 "C" V 3239 1950 50  0000 C CNN
+F 2 "" H 3438 1800 50  0001 C CNN
+F 3 "~" H 3400 1950 50  0001 C CNN
+	1    3400 1950
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:C C?
+U 1 1 60329F13
+P 3400 2250
+F 0 "C?" V 3148 2250 50  0000 C CNN
+F 1 "C" V 3239 2250 50  0000 C CNN
+F 2 "" H 3438 2100 50  0001 C CNN
+F 3 "~" H 3400 2250 50  0001 C CNN
+	1    3400 2250
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	3250 1950 3250 2250
+Wire Wire Line
+	3250 2250 3250 2450
+Connection ~ 3250 2250
+$Comp
+L power:GND #PWR?
+U 1 1 6032AD30
+P 3250 2450
+F 0 "#PWR?" H 3250 2200 50  0001 C CNN
+F 1 "GND" H 3255 2277 50  0000 C CNN
+F 2 "" H 3250 2450 50  0001 C CNN
+F 3 "" H 3250 2450 50  0001 C CNN
+	1    3250 2450
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R R?
+U 1 1 6032DA1C
+P 2450 1400
+F 0 "R?" H 2380 1354 50  0000 R CNN
+F 1 "R" H 2380 1445 50  0000 R CNN
+F 2 "" V 2380 1400 50  0001 C CNN
+F 3 "~" H 2450 1400 50  0001 C CNN
+	1    2450 1400
+	-1   0    0    1   
+$EndComp
+Text GLabel 4050 1550 2    50   Input ~ 0
+RESET
+Wire Wire Line
+	4550 1750 4050 1750
+Wire Wire Line
+	4050 1750 4050 1550
+$Comp
+L power:VCC #PWR?
+U 1 1 6034FFC2
+P 2450 1250
+F 0 "#PWR?" H 2450 1100 50  0001 C CNN
+F 1 "VCC" H 2467 1423 50  0000 C CNN
+F 2 "" H 2450 1250 50  0001 C CNN
+F 3 "" H 2450 1250 50  0001 C CNN
+	1    2450 1250
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C C?
+U 1 1 603504A9
+P 2450 1700
+F 0 "C?" H 2565 1746 50  0000 L CNN
+F 1 "C" H 2565 1655 50  0000 L CNN
+F 2 "" H 2488 1550 50  0001 C CNN
+F 3 "~" H 2450 1700 50  0001 C CNN
+	1    2450 1700
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2450 1550 4050 1550
+Connection ~ 2450 1550
+Wire Wire Line
+	2450 1850 2450 2450
+Wire Notes Line
+	3000 2250 3000 3650
+Wire Notes Line
+	3000 3650 1850 3650
+Text Notes 2200 3500 0    118  ~ 0
+FTDI
+$Comp
+L Switch:SW_Push_Dual SW?
+U 1 1 6039D3E3
+P 1800 1500
+F 0 "SW?" H 1800 1785 50  0000 C CNN
+F 1 "SW_Push_Dual" H 1800 1694 50  0000 C CNN
+F 2 "" H 1800 1700 50  0001 C CNN
+F 3 "~" H 1800 1700 50  0001 C CNN
+	1    1800 1500
+	1    0    0    -1  
+$EndComp
+Text GLabel 1600 1500 0    50   Input ~ 0
+RESET
+Wire Wire Line
+	1600 1500 1600 1150
+Wire Wire Line
+	1600 1150 2000 1150
+Wire Wire Line
+	2000 1150 2000 1500
+Wire Wire Line
+	2000 1700 2000 1600
+Wire Wire Line
+	2000 1600 1600 1600
+Wire Wire Line
+	1600 1600 1600 1700
+$Comp
+L power:GND #PWR?
+U 1 1 603A4DD5
+P 2000 1700
+F 0 "#PWR?" H 2000 1450 50  0001 C CNN
+F 1 "GND" H 2005 1527 50  0000 C CNN
+F 2 "" H 2000 1700 50  0001 C CNN
+F 3 "" H 2000 1700 50  0001 C CNN
+	1    2000 1700
+	1    0    0    -1  
+$EndComp
+Connection ~ 2000 1700
+Wire Notes Line
+	1850 3650 1850 2250
+Wire Notes Line
+	1850 2250 3000 2250
+Wire Notes Line
+	2800 750  1150 750 
+Wire Notes Line
+	1150 2000 2800 2000
+Wire Notes Line
+	2800 750  2800 2000
+Wire Notes Line
+	1150 750  1150 2000
+Text Notes 1700 950  0    118  ~ 0
+RESET
+$Comp
+L Connector:AVR-ISP-6 J?
+U 1 1 603CD716
+P 9600 1750
+F 0 "J?" H 9321 1846 50  0000 R CNN
+F 1 "AVR-ISP-6" H 9321 1755 50  0000 R CNN
+F 2 "" V 9350 1800 50  0001 C CNN
+F 3 " ~" H 8325 1200 50  0001 C CNN
+	1    9600 1750
+	1    0    0    -1  
+$EndComp
+Text Notes 9300 950  0    118  ~ 0
+ISP
+$Comp
+L mysensors_radios:RFM95HW U?
+U 1 1 603D7158
+P 10150 2950
+F 0 "U?" H 10150 3564 40  0000 C CNN
+F 1 "RFM95HW" H 10150 3488 40  0000 C CNN
+F 2 "mysensors_radios:RFM69HW_SMD_ThroughHole_Handsoldering" H 10150 2950 30  0001 C CIN
+F 3 "rfm95" H 10150 3397 60  0000 C CNN
+	1    10150 2950
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR?
+U 1 1 603DF58F
+P 5150 5450
+F 0 "#PWR?" H 5150 5200 50  0001 C CNN
+F 1 "GND" H 5155 5277 50  0000 C CNN
+F 2 "" H 5150 5450 50  0001 C CNN
+F 3 "" H 5150 5450 50  0001 C CNN
+	1    5150 5450
+	1    0    0    -1  
+$EndComp
 $EndSCHEMATC
