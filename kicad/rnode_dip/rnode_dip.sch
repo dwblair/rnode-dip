@@ -101,17 +101,6 @@ VBUS
 Wire Wire Line
 	1600 6850 1100 6850
 Connection ~ 1600 6850
-$Comp
-L power:VCC #PWR?
-U 1 1 602FFF7F
-P 3800 6850
-F 0 "#PWR?" H 3800 6700 50  0001 C CNN
-F 1 "VCC" H 3817 7023 50  0000 C CNN
-F 2 "" H 3800 6850 50  0001 C CNN
-F 3 "" H 3800 6850 50  0001 C CNN
-	1    3800 6850
-	1    0    0    -1  
-$EndComp
 Wire Wire Line
 	3800 6850 3250 6850
 Connection ~ 3250 6850
@@ -238,17 +227,6 @@ Wire Wire Line
 Wire Wire Line
 	4050 1750 4050 1550
 $Comp
-L power:VCC #PWR?
-U 1 1 6034FFC2
-P 2450 1250
-F 0 "#PWR?" H 2450 1100 50  0001 C CNN
-F 1 "VCC" H 2467 1423 50  0000 C CNN
-F 2 "" H 2450 1250 50  0001 C CNN
-F 3 "" H 2450 1250 50  0001 C CNN
-	1    2450 1250
-	1    0    0    -1  
-$EndComp
-$Comp
 L Device:C C?
 U 1 1 603504A9
 P 2450 1700
@@ -337,12 +315,12 @@ ISP
 $Comp
 L mysensors_radios:RFM95HW U?
 U 1 1 603D7158
-P 10150 2950
-F 0 "U?" H 10150 3564 40  0000 C CNN
-F 1 "RFM95HW" H 10150 3488 40  0000 C CNN
-F 2 "mysensors_radios:RFM69HW_SMD_ThroughHole_Handsoldering" H 10150 2950 30  0001 C CIN
-F 3 "rfm95" H 10150 3397 60  0000 C CNN
-	1    10150 2950
+P 10100 4500
+F 0 "U?" H 9800 4950 40  0000 C CNN
+F 1 "RFM95HW" H 9800 4850 40  0000 C CNN
+F 2 "mysensors_radios:RFM69HW_SMD_ThroughHole_Handsoldering" H 10100 4500 30  0001 C CIN
+F 3 "rfm95" H 10100 4400 60  0000 C CNN
+	1    10100 4500
 	1    0    0    -1  
 $EndComp
 $Comp
@@ -356,20 +334,168 @@ F 3 "" H 5150 5450 50  0001 C CNN
 	1    5150 5450
 	1    0    0    -1  
 $EndComp
-$Comp
-L power:VCC #PWR?
-U 1 1 603E6D3F
-P 5150 1050
-F 0 "#PWR?" H 5150 900 50  0001 C CNN
-F 1 "VCC" H 5167 1223 50  0000 C CNN
-F 2 "" H 5150 1050 50  0001 C CNN
-F 3 "" H 5150 1050 50  0001 C CNN
-	1    5150 1050
-	1    0    0    -1  
-$EndComp
 Wire Wire Line
 	5250 1450 5150 1450
 Wire Wire Line
 	5150 1450 5150 1050
 Connection ~ 5150 1450
+$Comp
+L Connector:Conn_01x07_Female J?
+U 1 1 603F5459
+P 8050 4300
+F 0 "J?" H 7942 3775 50  0000 C CNN
+F 1 "INAIR_L" H 7942 3866 50  0000 C CNN
+F 2 "" H 8050 4300 50  0001 C CNN
+F 3 "~" H 8050 4300 50  0001 C CNN
+	1    8050 4300
+	-1   0    0    1   
+$EndComp
+$Comp
+L Connector:Conn_01x07_Female J?
+U 1 1 603F7BAF
+P 8050 5450
+F 0 "J?" H 7942 4925 50  0000 C CNN
+F 1 "INAIR_R" H 7942 5016 50  0000 C CNN
+F 2 "" H 8050 5450 50  0001 C CNN
+F 3 "~" H 8050 5450 50  0001 C CNN
+	1    8050 5450
+	-1   0    0    1   
+$EndComp
+$Comp
+L power:GND #PWR?
+U 1 1 603FBF93
+P 8450 3750
+F 0 "#PWR?" H 8450 3500 50  0001 C CNN
+F 1 "GND" H 8455 3577 50  0000 C CNN
+F 2 "" H 8450 3750 50  0001 C CNN
+F 3 "" H 8450 3750 50  0001 C CNN
+	1    8450 3750
+	-1   0    0    1   
+$EndComp
+$Comp
+L power:+3V3 #PWR?
+U 1 1 60405A81
+P 3800 6850
+F 0 "#PWR?" H 3800 6700 50  0001 C CNN
+F 1 "+3V3" H 3815 7023 50  0000 C CNN
+F 2 "" H 3800 6850 50  0001 C CNN
+F 3 "" H 3800 6850 50  0001 C CNN
+	1    3800 6850
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+3V3 #PWR?
+U 1 1 60406B29
+P 2450 1250
+F 0 "#PWR?" H 2450 1100 50  0001 C CNN
+F 1 "+3V3" H 2465 1423 50  0000 C CNN
+F 2 "" H 2450 1250 50  0001 C CNN
+F 3 "" H 2450 1250 50  0001 C CNN
+	1    2450 1250
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+3V3 #PWR?
+U 1 1 6040C6F5
+P 5150 1050
+F 0 "#PWR?" H 5150 900 50  0001 C CNN
+F 1 "+3V3" H 5165 1223 50  0000 C CNN
+F 2 "" H 5150 1050 50  0001 C CNN
+F 3 "" H 5150 1050 50  0001 C CNN
+	1    5150 1050
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+3V3 #PWR?
+U 1 1 604176B3
+P 8550 5150
+F 0 "#PWR?" H 8550 5000 50  0001 C CNN
+F 1 "+3V3" H 8565 5323 50  0000 C CNN
+F 2 "" H 8550 5150 50  0001 C CNN
+F 3 "" H 8550 5150 50  0001 C CNN
+	1    8550 5150
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	8250 4000 8450 4000
+Wire Wire Line
+	8450 4000 8450 3750
+Wire Wire Line
+	8250 5250 8550 5250
+Wire Wire Line
+	8550 5250 8550 5150
+Text GLabel 8250 5350 2    50   Input ~ 0
+SCK
+Text GLabel 8250 5450 2    50   Input ~ 0
+MISO
+Text GLabel 8250 5550 2    50   Input ~ 0
+MOSI
+Text GLabel 8250 4400 2    50   Input ~ 0
+DIO_0
+Text GLabel 8250 4300 2    50   Input ~ 0
+LORA_RST
+Text GLabel 8250 4100 2    50   Input ~ 0
+LORA_CS
+Text GLabel 9550 4550 0    50   Input ~ 0
+LORA_CS
+Text GLabel 9550 5050 0    50   Input ~ 0
+LORA_RST
+Text GLabel 10650 4500 2    50   Input ~ 0
+DIO_0
+Text GLabel 9550 4750 0    50   Input ~ 0
+MISO
+Text GLabel 9550 4650 0    50   Input ~ 0
+MOSI
+Text GLabel 9550 4850 0    50   Input ~ 0
+SCK
+Text GLabel 10000 1650 2    50   Input ~ 0
+MOSI
+Text GLabel 10000 1550 2    50   Input ~ 0
+MISO
+Text GLabel 10000 1750 2    50   Input ~ 0
+SCK
+Text GLabel 10000 1850 2    50   Input ~ 0
+RESET
+$Comp
+L power:GND #PWR?
+U 1 1 6044E968
+P 9500 2150
+F 0 "#PWR?" H 9500 1900 50  0001 C CNN
+F 1 "GND" H 9505 1977 50  0000 C CNN
+F 2 "" H 9500 2150 50  0001 C CNN
+F 3 "" H 9500 2150 50  0001 C CNN
+	1    9500 2150
+	1    0    0    -1  
+$EndComp
+Text GLabel 9500 1250 0    50   Input ~ 0
+VBUS
+$Comp
+L power:+3V3 #PWR?
+U 1 1 6045AC5D
+P 10100 4150
+F 0 "#PWR?" H 10100 4000 50  0001 C CNN
+F 1 "+3V3" H 10250 4200 50  0000 C CNN
+F 2 "" H 10100 4150 50  0001 C CNN
+F 3 "" H 10100 4150 50  0001 C CNN
+	1    10100 4150
+	1    0    0    -1  
+$EndComp
+Text GLabel 5750 3350 2    50   Input ~ 0
+SCK
+Text GLabel 5750 3250 2    50   Input ~ 0
+MISO
+Text GLabel 5750 3150 2    50   Input ~ 0
+MOSI
+Text GLabel 5750 3050 2    50   Input ~ 0
+LORA_CS
+Text GLabel 5750 2950 2    50   Input ~ 0
+LORA_RST
+Text GLabel 5750 2850 2    50   Input ~ 0
+DIO_0
+Wire Notes Line
+	11250 3200 7700 3200
+Wire Notes Line
+	7700 3200 7700 6500
+Text Notes 9400 3500 0    118  ~ 0
+LORA
 $EndSCHEMATC

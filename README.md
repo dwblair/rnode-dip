@@ -16,5 +16,28 @@ Pic of module: <img src="/ref/semtech_full.jpg">
 
 Pic of pinout (looking down from top): <img src="/ref/semtech.gif">
 
+Pins (from that diagram, matching original schematic):
+
+RHS:
+1. DIO5
+2. 
+3. MOSI
+4. MISO
+5. SCK
+6. 3.3V
+
+LHS:
+1. DIO2
+2. DIO1
+3. DIO0
+4. RST
+5. DIO3
+6. CS
+7. GND
+
 Pic of original rnode: <img src="/ref/rnode_original.jpg">
+
+
+
+
 
