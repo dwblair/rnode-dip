@@ -37,7 +37,16 @@ LHS:
 
 Pic of original rnode: <img src="/ref/rnode_original.jpg">
 
+## Arduino Board definition for RNode
+
+Discussed [here](https://unsigned.io/board-support-in-arduino-ide/)
 
 
+## Bootloader
+
+Not yet sure how to do this. Some useful-seeming hints:
+
+- [http://www.technoblogy.com/show?19OV](http://www.technoblogy.com/show?19OV)
+- [https://github.com/maniacbug/mighty-1284p](https://github.com/maniacbug/mighty-1284p)
 
 
